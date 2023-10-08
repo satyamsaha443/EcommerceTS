@@ -25,11 +25,13 @@ function displayProducts(products) {
                     <div class="card-body">
                         <h5 class="card-title">${product.title}</h5>
                         <p class="card-text">${product.description.substring(0,100)}...</p>
+                        
+                        <p><strong>Category:</strong> ${product.category}</p>
+                        <p><strong>Price:</strong> $${product.price}</p>
                     </div>
                 </a>
                 <div class="card-footer">
-                    <p><strong>Price: $${product.price}</strong></p>
-                    <button class="btn btn-primary" onclick="addToCart('${product.title}', ${product.price}, '${product.image}')">Add to Cart</button>
+                <button class="btn btn-primary" onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.category}', '${product.description}', '${product.image}')">Add to Cart</button>
                 </div>
             </div>
         `;
@@ -38,19 +40,29 @@ function displayProducts(products) {
     });
 }
 
+
 // ... (rest of the scripts.js file)
 
 
-function addToCart(productName, productPrice, productImage) {
+function addToCart(productID, productName, productPrice, productCategory, productDescription, productImage) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let productIndex = cart.findIndex(item => item.name === productName);
+    let productIndex = cart.findIndex(item => item.id === productID);
 
     if (productIndex !== -1) {
         cart[productIndex].quantity += 1;
     } else {
-        cart.push({ name: productName, price: productPrice, image: productImage, quantity: 1 });
+        cart.push({
+            id: productID,
+            name: productName,
+            price: productPrice,
+            category: productCategory,
+            description: productDescription,
+            image: productImage,
+            quantity: 1
+        });
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${productName} added to cart.`);
 }
+

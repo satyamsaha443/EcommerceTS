@@ -13,7 +13,10 @@ function displayCartItems() {
 
         tr.innerHTML = `
             <td><img src="${item.image}" alt="${item.name}" width="50"></td>
+            <td>${item.id}</td>
             <td>${item.name}</td>
+            <td>${item.category}</td>
+            <td>${item.description}</td>
             <td>$${item.price}</td>
             <td>${item.quantity}</td>
             <td>$${item.price * item.quantity}</td>
@@ -26,7 +29,6 @@ function displayCartItems() {
         cartContainer.appendChild(tr);
     });
 }
-
 
 
 
