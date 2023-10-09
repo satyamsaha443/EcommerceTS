@@ -57,12 +57,5 @@ function changeQuantity(index: number, change: number): void {
 
 
 function proceedToPayment(): void {
-    let cart: CartItem[] = JSON.parse(localStorage.getItem('cart') as string) || [];
-    if(cart.length>0){
     window.location.href = 'payment.html';
-}else {
-    alert('Your cart is empty.Please add some items!!')
 }
-  
-}
-
