@@ -227,3 +227,176 @@ label {
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;  /* Slightly adjusted for Bootstrap's default background */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #000000a1;
+    margin-bottom: 20px;
+}
+
+.logo a,
+.vw-cart a,
+.cat a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.logo a:hover,
+.vw-cart a:hover,
+.cat a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.prod {
+    box-shadow: #0000001a 3px 3px 20px 0px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.prod:hover {
+    transform: scale(1.03);
+    transition: transform .3s;
+}
+
+.btn-cart {
+    background-color: #0000001a;
+    border-color: #000000a1;
+    color: #000;
+}
+
+.btn-cart:hover {
+    background-color: #000000a1;
+    color: #ffffff;
+    transform: scale(1.01);
+    transition: transform .1s;
+}
+
+.prod-content {
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.table {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 5px;
+}
+
+.payment-page {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.card-detail {
+    padding: 10px;
+}
+
+
+/* ... Existing CSS ... */
+
+/* Category Button Styling */
+#categories button {
+    margin: 0 10px 20px 10px;  /* Space between buttons */
+    padding: 10px 20px;        /* Button size adjustment */
+    background-color: #000000a1;  /* Button color */
+    color: #fff;                  /* Text color */
+    border: none;                 /* Removing border */
+    border-radius: 25px;          /* Making it slightly rounded */
+    transition: all 0.3s;        /* Smooth transition for all changes */
+    font-size: 18px;              /* Font size adjustment */
+}
+
+#categories button:hover {
+    background-color: #333;     /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Shadow for 3D effect */
+}
+
+/* Enhance the logo with some custom styling */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Add some custom styling for the nav links for better visibility */
+.nav-link {
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Bootstrap's yellow color */
+}
+
+/* Style the product detail container */
+.product-page {
+    margin-top: 50px;
+}
+
+
+/* Gradient background for the navbar */
+.bg-gradient {
+    background: linear-gradient(90deg, #282c34, #3a3f4b);
+}
+
+/* Enhancing the navbar brand */
+.navbar-brand {
+    color: yellow;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Enhancing the navbar links */
+.nav-link {
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f8f9fa;
+}
+
+/* Center the 'Buy me a Coffee' link and style it */
+.coffee-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.coffee-link {
+    background-color: #f8f9fa;
+    color: #282c34;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.coffee-link:hover {
+    background-color: #3a3f4b;
+    color: #f8f9fa;
+}
+
+/* Right-align the Categories and Cart links */
+.right-links {
+    position: absolute;
+    right: 2%;
+    display: flex;
+    gap: 10px;
+}
+
+/* Adjustments for the cart icon */
+.fa-cart-shopping {
+    margin-right: 5px;
+}
