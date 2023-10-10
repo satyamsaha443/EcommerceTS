@@ -47,13 +47,21 @@ function addQuantity(index) {
 
 function subQuantity(index) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart[index].quantity -= 1;
-    localStorage.setItem('cart', JSON.stringify(cart));
-    displayCartItems();
-}
+    if(cart[index].quantity >0){
+        cart[index].quantity -= 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
 
+    }
+        displayCartItems();
+}
 
 function proceedToPayment() {
+   var cart = JSON.parse(localStorage.getItem('cart')) || [];
+   if(cart.length >0){
     window.location.href = 'payment.html';
+   }else{
+    alert('Your cart is empty. Please add some items first!!');
+   }
 }
+
 

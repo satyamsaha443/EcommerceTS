@@ -29,8 +29,9 @@ function displayProducts(products) {
                         <p><strong>Category:</strong> ${product.category}</p>
                         <p><strong>Price:</strong> ₹${product.price}</p>
 
-                        <button class="btn-cart" onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.category}', '${product.description}', '${product.image}')">Add to Cart</button>
-
+                        <button class="btn-cart" onclick="addToCart(event, ${product.id}, '${product.title}', ${product.price}, '${product.category}', '${product.description}', '${product.image}')">
+                        Add to Cart
+                      </button>                                             
                     </div>
                 </a>
             </div>
@@ -40,12 +41,28 @@ function displayProducts(products) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('https://fakestoreapi.com/products')
+        .then(res => res.json())
+        .then(data => {
+            displayProducts(data);
 
-// ... (rest of the scripts.js file)
+            // Extract and store unique categories
+            const categoriesSet = new Set(data.map(product => product.category));
+            localStorage.setItem('categories', JSON.stringify([...categoriesSet]));
+
+            // Store all products to localStorage for category-based filtering
+            localStorage.setItem('products', JSON.stringify(data));
+        })
+        .catch(error => {
+            console.error("Error fetching products:", error);
+        });
+});
 
 
-function addToCart(productID, productName, productPrice, productCategory, productDescription, productImage) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+function addToCart(event, productID, productName, productPrice, productCategory, productDescription, productImage) {
+    event.preventDefault();
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let productIndex = cart.findIndex(item => item.id === productID);
 
     if (productIndex !== -1) {
@@ -61,8 +78,10 @@ function addToCart(productID, productName, productPrice, productCategory, produc
             quantity: 1
         });
     }
-
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${productName} added to cart.`);
+  
+    // Redirect to cart page
+    window.location.href = 'cart.html';
+  
 }
 

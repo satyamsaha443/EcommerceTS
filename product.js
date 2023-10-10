@@ -47,5 +47,9 @@ function addToCart(productName, productPrice, productImage) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${productName} added to cart.`);
+   
+
+    
+
+    window.location.href = "cart.html";
 }

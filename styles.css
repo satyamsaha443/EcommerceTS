@@ -13,8 +13,8 @@ body {
 }
 
 .navbar {
-    background-color: #000000a1;
-    color: white;
+    background: linear-gradient(90deg, rgba(184,214,224,1) 5%, rgba(166,196,201,1) 50%, rgba(22,183,204,1) 100%);      box-shadow: 0px 2px 4px #ddd; 
+    color: rgb(132, 9, 214);
     margin: 0px 0px 20px 0px;
     display: flex;
     align-items: flex-start;
@@ -43,9 +43,7 @@ body {
     padding: 10px;
     margin: 10px;
     box-shadow: #0000001a 3px 3px 20px 0px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(90deg, rgba(219,228,231,1) 1%, rgba(227,237,238,1) 100%);    font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +105,7 @@ body {
 
 .btn-cart:hover {
     background-color: #000000a1;
-    color: #ffffff;
+    color: #312727;
     transform: scale(1.01);
     transition: transform .1s;
     font-weight: 700;
@@ -227,3 +225,154 @@ label {
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;  /* Slightly adjusted for Bootstrap's default background */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #000000a1;
+    margin-bottom: 20px;
+}
+
+.logo a,
+.vw-cart a,
+.cat a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.logo a:hover,
+.vw-cart a:hover,
+.cat a:hover {
+    color: #500893;
+    text-decoration: none;
+}
+
+.prod {
+    box-shadow: #0000001a 3px 3px 20px 0px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.prod:hover {
+    transform: scale(1.03);
+    transition: transform .3s;
+}
+
+.btn-cart {
+    background-color: #0000001a;
+    border-color: #000000a1;
+    color: #000;
+}
+
+.btn-cart:hover {
+    background-color: #000000a1;
+    color: #ffffff;
+    transform: scale(1.01);
+    transition: transform .1s;
+}
+
+.prod-content {
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.table {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 5px;
+}
+
+.payment-page {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.card-detail {
+    padding: 10px;
+}
+
+
+/* ... Existing CSS ... */
+
+/* Category Button Styling */
+#categories button {
+    margin: 0 10px 20px 10px;  /* Space between buttons */
+    padding: 10px 20px;        /* Button size adjustment */
+    background-color: #000000a1;  /* Button color */
+    color: #fff;                  /* Text color */
+    border: none;                 /* Removing border */
+    border-radius: 25px;          /* Making it slightly rounded */
+    transition: all 0.3s;        /* Smooth transition for all changes */
+    font-size: 18px;              /* Font size adjustment */
+}
+
+#categories button:hover {
+    background-color: #333;     /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Shadow for 3D effect */
+}
+
+
+
+.continue-shopping {
+    padding: 0.6em 1.2em;
+    border-radius: 0.375em;
+    cursor: pointer;
+    color: rgb(30, 23, 23);
+    background: linear-gradient(120deg, rgb(32, 0, 139), rgb(245, 245, 245), rgba(60, 225, 217, 0.32));
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position .5s;
+  } 
+  
+  .continue-shopping:hover {
+    background-position: 0 0;
+  }
+  
+  .proceed-pay{
+    padding: 0.6em 1.2em;
+    border-radius: 0.375em;
+    cursor: pointer;
+    color: rgb(30, 23, 23);
+    background: linear-gradient(120deg, rgb(32, 0, 139), rgb(245, 245, 245), rgba(60, 225, 217, 0.32));
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position .5s;
+  }
+  .proceed-pay:hover{
+    background-position: 0 0;
+
+  }
+  .cart-navbar{
+    display: flex; 
+    justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     background: linear-gradient(90deg, rgba(184,214,224,1) 5%, rgba(166,196,201,1) 50%, rgba(22,183,204,1) 100%);      box-shadow: 0px 2px 4px #ddd; 
+      padding: 10px
+  }
+
+  .cart-logo{
+    font-size: 22px; font-weight: bold; color: #333; 
+  }
+
+  .new-cart
+  .cart-cat
+  {
+    padding: 20px 10px 20px 10px;
+    justify-content: space-around;
+  }
+
+
+  .cart-cat a { margin-left: 20px; font-size: 16px; color: #333; text-transform: uppercase; }
+
+.cart-cat a:hover { color: rgb(16, 122, 146); }

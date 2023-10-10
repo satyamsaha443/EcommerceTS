@@ -16,19 +16,23 @@
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo"><a href="index.html">E SHOP</a></div>
-        <div class="cat">Categories</div>
-        <div class="vw-cart">
-            <a href="cart.html">
-                <i class="fa-solid fa-cart-shopping"></i> View Cart</a>
+    <nav class="cart-navbar">
+        <div class="cart-logo"><a href="index.html">E SHOP</a></div>
+        <div class="cart-d-flex">
+            
+        <div class="new-cart">
+            <a href="category.html">
+                <i></i> Category</a>
         </div>
-        <div class="cat"><a href="https://github.com/devesh2511" target=”_blank”>Buy me a Coffee!!</a></div>
+
+        <div class="cart-cat"><a href="https://github.com/satyamsaha443" target=”_blank”>Buy me a Coffee!!</a></div>
+
     </nav>
 
+
     <div class="container-cart">
-        <h1>Shopping Cart</h1>
-        <a href="index.html">Continue Shopping</a>
+        <h1><i class="fa-solid fa-cart-shopping"></i> Cart</h1>
+       <button class="continue-shopping"> <a href="index.html">Continue Shopping</a></button>
 
         <table class="table table-bordered">
             <thead>
@@ -46,7 +50,7 @@
             </tbody>
         </table>
 
-        <button onclick="proceedToPayment()" class="btn-cart">Proceed to Payment</button>
+        <button onclick="proceedToPayment()" class="proceed-pay">Proceed to Payment</button>
     </div>
 </body>
 <!-- ... -->
