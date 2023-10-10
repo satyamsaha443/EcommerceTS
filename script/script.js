@@ -39,7 +39,28 @@ function displayProducts(products) {
 
         productsContainer.appendChild(productDiv);
     });
-}
+}// ... (rest of the scripts.js file)
+
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('https://fakestoreapi.com/products')
+        .then(res => res.json())
+        .then(data => {
+            displayProducts(data);
+
+            // Extract and store unique categories
+            const categoriesSet = new Set(data.map(product => product.category));
+            localStorage.setItem('categories', JSON.stringify([...categoriesSet]));
+
+            // Store all products to localStorage for category-based filtering
+            localStorage.setItem('products', JSON.stringify(data));
+        })
+        .catch(error => {
+            console.error("Error fetching products:", error);
+        });
+});
+
+// ... (rest of the scripts.js file)
+
 
 document.addEventListener("DOMContentLoaded", function() {
     fetch('https://fakestoreapi.com/products')

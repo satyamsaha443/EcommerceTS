@@ -250,7 +250,11 @@ body {
 .logo a:hover,
 .vw-cart a:hover,
 .cat a:hover {
+<<<<<<< HEAD
     color: #500893;
+=======
+    color: #ccc;
+>>>>>>> 8814d7c3dc052f09bd2673120fc5d3a344a0c2be
     text-decoration: none;
 }
 
@@ -321,6 +325,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Shadow for 3D effect */
 }
 
+<<<<<<< HEAD
 
 
 .continue-shopping {
@@ -376,3 +381,82 @@ body {
   .cart-cat a { margin-left: 20px; font-size: 16px; color: #333; text-transform: uppercase; }
 
 .cart-cat a:hover { color: rgb(16, 122, 146); }
+=======
+/* Enhance the logo with some custom styling */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Add some custom styling for the nav links for better visibility */
+.nav-link {
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important; /* Bootstrap's yellow color */
+}
+
+/* Style the product detail container */
+.product-page {
+    margin-top: 50px;
+}
+
+
+/* Gradient background for the navbar */
+.bg-gradient {
+    background: linear-gradient(90deg, #282c34, #3a3f4b);
+}
+
+/* Enhancing the navbar brand */
+.navbar-brand {
+    color: yellow;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Enhancing the navbar links */
+.nav-link {
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f8f9fa;
+}
+
+/* Center the 'Buy me a Coffee' link and style it */
+.coffee-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.coffee-link {
+    background-color: #f8f9fa;
+    color: #282c34;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.coffee-link:hover {
+    background-color: #3a3f4b;
+    color: #f8f9fa;
+}
+
+/* Right-align the Categories and Cart links */
+.right-links {
+    position: absolute;
+    right: 2%;
+    display: flex;
+    gap: 10px;
+}
+
+/* Adjustments for the cart icon */
+.fa-cart-shopping {
+    margin-right: 5px;
+}
+>>>>>>> 8814d7c3dc052f09bd2673120fc5d3a344a0c2be
